@@ -3,7 +3,7 @@ function setBackgroundColorById(elementId) {
 	element.classList.add("bg-[#1dd100]");
 }
 
-function setSeatLeft() {
+function setLeftSeat() {
 	const element = document.getElementById("total-seat-left");
 	const previousTotal = parseInt(element.innerText);
 	const updatedTotal = previousTotal - 1;
@@ -17,12 +17,25 @@ function setTextElementValueById(elementId, value) {
 
 function appendTicket(seatID) {
 	const tbodyElementById = document.getElementById("tbody");
-	// const list = document.createElement(`<tr>
-	//    <td>${seatID}</td>
-	//    <td>Economy</td>
-	//    <td>550</td>
-	// </tr>`);
-	// tbodyElementById.append(list);
-	// console.log(tbodyElementById, seatID);
-	// console.log(`${seatID}`);
+	const tr = document.createElement("tr");
+	tr.innerHTML = `<td>${seatID}</td>
+	    <td>Economy</td>
+	    <td>550</td>`;
+	tbodyElementById.appendChild(tr);
+}
+
+function totalPrice(arrayLength) {
+	const totalPriceElement = document.getElementById("total-price");
+	const totalPriceValue = arrayLength * 550;
+	totalPriceElement.innerText = totalPriceValue;
+}
+
+function grandTotal(arrayLength) {
+	const grandTotalElement = document.getElementById("grand-total");
+	const totalPrice = arrayLength * 550;
+	grandTotalElement.innerText = totalPrice;
+}
+
+function applyButton(arrayLength) {
+	console.log("enable apply button");
 }
