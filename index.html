@@ -11,8 +11,30 @@
 			type="text/css"
 		/>
 		<script src="https://cdn.tailwindcss.com"></script>
+		<!-- ----------------------------- custom css ------------------------------ -->
+		<link rel="stylesheet" href="./styles/index.css" />
 	</head>
-	<body>
-		<h1>Smart Ticketing</h1>
+	<body class="font-raleway">
+		<header class="max-w-[1170px] mx-auto">
+			<!-- ------------------------------- navbar -------------------------------- -->
+			<nav class="navbar bg-base-100">
+				<div class="navbar-start">
+					<a class="btn btn-ghost text-4xl font-extrabold">P-Ticket</a>
+				</div>
+				<div class="navbar-end">
+					<a
+						class="btn text-[#1dd100] bg-[#1dd10019] border border-[#1dd10066] text-xl font-bold"
+					>
+						Bus
+						<img src="./images/bus-icon.png" alt="" />
+					</a>
+				</div>
+			</nav>
+		</header>
+		<main></main>
+		<footer></footer>
+		<!-- ------------------------------- script -------------------------------- -->
+		<script src="./scripts/index.js"></script>
+		<script src="./scripts/utility.js"></script>
 	</body>
 </html>
