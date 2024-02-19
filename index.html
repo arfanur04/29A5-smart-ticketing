@@ -17,9 +17,9 @@
 	<body class="font-raleway">
 		<header class="max-w-[1170px] mx-auto">
 			<!-- ------------------------------- navbar -------------------------------- -->
-			<nav class="navbar bg-base-100 my-6">
+			<nav class="my-6 navbar bg-base-100">
 				<div class="navbar-start">
-					<a class="btn btn-ghost text-4xl font-extrabold">P-Ticket</a>
+					<a class="text-4xl font-extrabold btn btn-ghost">P-Ticket</a>
 				</div>
 				<div class="navbar-end">
 					<a
@@ -37,7 +37,7 @@
 				style="background-image: url(./images/banner.png)"
 			>
 				<div class="hero-overlay bg-opacity-30 rounded-[32px]"></div>
-				<div class="hero-content text-center text-neutral-content">
+				<div class="text-center hero-content text-neutral-content">
 					<div class="max-w-3xl">
 						<h1 class="mb-5 text-5xl font-bold text-white">
 							End-to-End Travel with <br />
@@ -57,14 +57,14 @@
 		<main>
 			<!-- ------------------------- Best offer section -------------------------- -->
 			<section class="max-w-[1170px] mx-auto">
-				<h3 class="text-center text-4xl font-bold">Best offers for you</h3>
-				<div class="flex gap-6 mt-8">
+				<h3 class="text-4xl font-bold text-center">Best offers for you</h3>
+				<div class="flex flex-col gap-6 mt-8 lg:flex-row">
 					<section
 						class="flex-1 bg-[#FFBF0F] p-12 rounded-2xl flex justify-between items-center"
 					>
 						<div>
 							<h2 class="text-5xl font-extrabold">15% OFF</h2>
-							<p class="font-semibold text-xl">on your next purchase</p>
+							<p class="text-xl font-semibold">on your next purchase</p>
 							<p>use by January 2024</p>
 						</div>
 						<div>
@@ -77,7 +77,7 @@
 					>
 						<div>
 							<h2 class="text-5xl font-extrabold">20% OFF</h2>
-							<p class="font-semibold text-xl">on your next purchase</p>
+							<p class="text-xl font-semibold">on your next purchase</p>
 							<p>use by January 2024</p>
 						</div>
 						<div>
@@ -86,10 +86,214 @@
 						</div>
 					</section>
 				</div>
-				<div class="text-center mt-8">
+				<div class="mt-8 text-center">
 					<button class="btn bg-white border-[#1DD100] text-[#1DD100]">
 						See All Offers
 					</button>
+				</div>
+			</section>
+
+			<!-- ------------------------ P.H Paribahan Section ------------------------ -->
+			<section
+				class="bg-[#f7f8f8] mt-24"
+				style="
+					border-radius: 88px 88px 0px 0px;
+					border-top: 2px solid rgb(29, 209, 0);
+				"
+			>
+				<div class="min-h-[50vh] max-w-[1170px] mx-auto mt-24">
+					<h3 class="text-4xl font-bold text-center">P.H Paribahan</h3>
+					<p
+						class="max-w-3xl mx-auto mt-6 text-lg text-center text-[#03071299]"
+					>
+						Compare fares and amenities from multiple bus operators on a single
+						platform. Find the perfect option for your budget and needs. Take
+						advantage of exclusive deals.
+					</p>
+					<!-- price section -->
+					<section
+						class="flex flex-col p-4 mt-8 bg-white lg:flex-row lg:gap-16 rounded-xl"
+					>
+						<div class="flex-1">
+							<div class="flex justify-between">
+								<div class="flex items-center gap-4">
+									<img src="./images/bus-logo.png" alt="" />
+									<div>
+										<h3 class="text-3xl font-bold">Greenline Paribahan</h3>
+										<p class="text-[#03071299]">Coach-009-WEB ! AC_Business</p>
+									</div>
+								</div>
+								<div
+									class="flex bg-[#1dd10026] rounded-xl px-4 gap-4 items-center"
+								>
+									<img src="./images/seat-green.png" alt="" />
+									<p class="text-[#1dd100] font-semibold">
+										<span id="total-seat-left">8</span> Seats left
+									</p>
+								</div>
+							</div>
+							<div class="rounded-xl bg-[#f7f8f8] mt-6 p-6 space-y-3">
+								<div class="flex justify-between">
+									<p class="text-[#03071299]">Route</p>
+									<h6 class="text-lg font-semibold">Dhaka - Sylhet</h6>
+								</div>
+								<hr />
+								<div class="flex justify-between">
+									<p class="text-[#03071299]">Departure Time</p>
+									<h6 class="text-lg font-semibold">9:00 PM</h6>
+								</div>
+								<hr />
+								<div class="flex justify-between">
+									<button
+										class="rounded-xl px-4 text-[#030712cc] font-medium bg-[#0307120c] p-2"
+									>
+										Boarding Point - Laxmipur
+									</button>
+									<button
+										class="rounded-xl px-4 text-[#030712cc] font-medium bg-[#0307120c] p-2"
+									>
+										Dropping Point - Bogura
+									</button>
+									<button
+										class="rounded-xl px-4 text-[#030712cc] font-medium bg-[#0307120c] p-2"
+									>
+										Est. Time - 11 Hour
+									</button>
+								</div>
+							</div>
+						</div>
+						<div
+							class="flex flex-col items-center justify-center gap-2 p-6 rounded-xl"
+						>
+							<img src="./images/fare.png" alt="" />
+							<h3 class="text-3xl font-bold">550 Taka</h3>
+							<p class="text-xl">Per Seat</p>
+						</div>
+					</section>
+
+					<!-- Your seat section -->
+					<section
+						class="flex flex-col gap-4 p-4 mt-6 bg-white lg:gap-10 rounded-xl lg:flex-row"
+					>
+						<div class="w-3/5 space-y-4">
+							<h4 class="text-2xl font-semibold">Select Your Seat</h4>
+							<div class="flex items-center justify-between">
+								<div class="flex items-center gap-2">
+									<img src="./images/seat-gray.png" alt="" />
+									<p class="text-[#03071280] font-medium">Available</p>
+								</div>
+								<div class="flex items-center gap-2">
+									<img src="./images/seat-green-filled.png" alt="" />
+									<p class="text-[#1dd100] font-medium">Selected</p>
+								</div>
+							</div>
+							<div class="flex justify-end">
+								<button>
+									<img src="./svg/steering.svg" alt="" />
+								</button>
+							</div>
+							<!-- seat container -->
+							<div id="seat-container">
+								<div class="grid grid-cols-5 gap-6">
+									<button class="cursor-default">A</button>
+									<button id="A1" class="btn">A1</button>
+									<button id="A2" class="btn">A2</button>
+									<button id="A3" class="btn">A3</button>
+									<button id="A4" class="btn">A4</button>
+								</div>
+								<div class="grid grid-cols-5 gap-6 mt-6">
+									<button class="cursor-default">B</button>
+									<button id="B1" class="btn">B1</button>
+									<button id="B2" class="btn">B2</button>
+									<button id="B3" class="btn">B3</button>
+									<button id="B4" class="btn">B4</button>
+								</div>
+							</div>
+						</div>
+						<div class="w-2/5">
+							<h4 class="text-2xl font-semibold">Select Your Seat</h4>
+							<div class="bg-[#f7f8f8] space-y-2 rounded-xl pb-6">
+								<!-- table -->
+								<div class="overflow-x-auto rounded-xl">
+									<table class="table">
+										<!-- head -->
+										<thead>
+											<tr class="font-bold text-black">
+												<th>
+													Seat
+													<span
+														id="selected-seat-length"
+														class="bg-[#1dd100] text-white px-2 pb-[2px] rounded-md"
+														>0</span
+													>
+												</th>
+												<th>Class</th>
+												<th>Price</th>
+											</tr>
+										</thead>
+										<tbody id="tbody">
+											<!-- row 1 -->
+											<tr>
+												<td>C2</td>
+												<td>Economy</td>
+												<td>550</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<hr />
+								<div class="flex justify-between px-4 font-bold">
+									<p>Total Price</p>
+									<p>BDT <span id="total-price">0</span></p>
+								</div>
+								<div
+									class="flex justify-between px-2 py-1 mx-2 bg-white rounded-xl"
+								>
+									<input
+										class="focus:outline-none"
+										type="text"
+										name=""
+										placeholder="Have any coupon?"
+										id="coupon-field"
+									/>
+									<button class="bg-[#1dd100] btn text-white">Apply</button>
+								</div>
+								<div class="flex justify-between px-4 font-bold">
+									<p>Grand Total</p>
+									<p>BDT <span id="grand-total">0</span></p>
+								</div>
+								<label class="w-full px-4 form-control">
+									<span class="mt-4 label-text">Passenger Name*</span>
+									<input
+										type="text"
+										placeholder="Enter your name"
+										class="w-full input input-bordered"
+									/>
+								</label>
+								<label class="w-full px-4 form-control">
+									<span class="mt-4 label-text">Passenger Number*</span>
+									<input
+										type="number"
+										placeholder="Enter your phone number"
+										class="w-full input input-bordered"
+									/>
+								</label>
+								<label class="w-full px-4 form-control">
+									<span class="mt-4 label-text">Email ID</span>
+									<input
+										type="email"
+										placeholder="Enter email address"
+										class="w-full input input-bordered"
+									/>
+								</label>
+								<div class="px-4">
+									<button class="btn bg-[#1dd100] text-white w-full">
+										Next
+									</button>
+								</div>
+							</div>
+						</div>
+					</section>
 				</div>
 			</section>
 		</main>
