@@ -24,9 +24,9 @@ document
 			showElementById("selected-seat-alert");
 			hideElementById("wrong-coupon");
 		}
-		if (seatArray.length) {
-			console.log(seatArray);
-		}
+		// if (seatArray.length) {
+		// 	console.log(seatArray);
+		// }
 	});
 
 function applyCoupon() {
@@ -53,3 +53,17 @@ function applyCoupon() {
 	couponFieldElement.value = "";
 	hideElementById("selected-seat-alert");
 }
+
+function nextButton() {
+	console.log("nextButton");
+}
+
+document
+	.getElementById("passenger-number")
+	.addEventListener("keyup", function (e) {
+		nextButtonEnable();
+	});
+
+document.body.addEventListener("click", function () {
+	nextButtonEnable();
+});

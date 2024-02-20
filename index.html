@@ -258,7 +258,7 @@
 									class="flex justify-between px-2 py-1 mx-2 bg-white rounded-xl"
 								>
 									<input
-										class="focus:outline-none"
+										class="w-full focus:outline-none"
 										type="text"
 										name=""
 										placeholder="Have any coupon?"
@@ -267,7 +267,7 @@
 									<button
 										onclick="applyCoupon()"
 										id="coupon-apply"
-										class="bg-[#1dd100] btn text-white btn-disabled"
+										class="bg-[#1dd100] btn text-white btn-disabled border border-[#1dd100] hover:border-[#1dd100] hover:text-[#1dd100]"
 									>
 										Apply
 									</button>
@@ -277,7 +277,7 @@
 									<p>BDT <span id="grand-total">0</span></p>
 								</div>
 								<label class="w-full px-4 form-control">
-									<span class="mt-4 label-text">Passenger Name*</span>
+									<span class="mt-4 label-text">Passenger Name</span>
 									<input
 										type="text"
 										placeholder="Enter your name"
@@ -285,8 +285,12 @@
 									/>
 								</label>
 								<label class="w-full px-4 form-control">
-									<span class="mt-4 label-text">Passenger Number*</span>
+									<span class="mt-4 label-text"
+										>Passenger Number
+										<span class="font-extrabold text-red-500">*</span></span
+									>
 									<input
+										id="passenger-number"
 										type="number"
 										placeholder="Enter your phone number"
 										class="w-full input input-bordered"
@@ -301,7 +305,11 @@
 									/>
 								</label>
 								<div class="px-4">
-									<button class="btn bg-[#1dd100] text-white w-full">
+									<button
+										onclick="nextButton()"
+										id="next-button"
+										class="btn bg-[#1dd100] text-white w-full btn-disabled border border-[#1dd100] hover:border-[#1dd100] hover:text-[#1dd100]"
+									>
 										Next
 									</button>
 								</div>

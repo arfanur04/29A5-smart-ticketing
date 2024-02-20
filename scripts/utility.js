@@ -66,3 +66,20 @@ function showElementById(elementId) {
 	const element = document.getElementById(elementId);
 	element.classList.remove("hidden");
 }
+
+function getTextElementValueById(elementId) {
+	const element = document.getElementById(elementId);
+	const elementValueText = element.innerText;
+	const value = parseInt(elementValueText);
+	return value;
+}
+
+function nextButtonEnable() {
+	const seatNumber = getTextElementValueById("selected-seat-length");
+	const inputNumber = parseInt(
+		document.getElementById("passenger-number").value
+	);
+	if (inputNumber && seatNumber) {
+		enableButton("next-button");
+	}
+}
