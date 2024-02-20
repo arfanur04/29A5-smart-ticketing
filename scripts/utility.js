@@ -36,6 +36,23 @@ function grandTotal(arrayLength) {
 	grandTotalElement.innerText = totalPrice;
 }
 
-function applyButton(arrayLength) {
-	console.log("enable apply button");
+function grandTotalCoupon(discountPercent) {
+	const couponElements = document.getElementById("coupon-element");
+	const grandTotalElement = document.getElementById("grand-total");
+	const selectedSeatElement = document.getElementById("selected-seat-length");
+	const selectedSeatNumber = parseInt(selectedSeatElement.innerText);
+	const totalPrice = selectedSeatNumber * 550;
+	const discountPrice = totalPrice - totalPrice * (discountPercent / 100);
+	grandTotalElement.innerText = discountPrice;
+	couponElements.classList.add("hidden");
+}
+
+function enableButton(elementId) {
+	const Element = document.getElementById(elementId);
+	Element.classList.remove("btn-disabled");
+}
+
+function hideElementById(elementId) {
+	const element = document.getElementById(elementId);
+	element.classList.add("hidden");
 }

@@ -17,9 +17,28 @@ document
 		}
 		if (seatArray.length === 4) {
 			console.log("You have reached your limit");
-			applyButton();
+			enableButton("coupon-apply");
 		}
-		if (seatArray.length) {
-			console.log(seatArray);
-		}
+		// if (seatArray.length) {
+		// 	console.log(seatArray);
+		// }
 	});
+
+function applyCoupon() {
+	const couponFieldElement = document.getElementById("coupon-field");
+	const value = couponFieldElement.value;
+
+	if (value.length) {
+		if (value === "NEW15") {
+			grandTotalCoupon(15);
+		} else if (value === "Couple 20") {
+			grandTotalCoupon(20);
+		} else {
+			console.log("wrong coupon, please provide a valid coupon");
+		}
+	} else {
+		console.log("You haven't entered a coupon");
+	}
+
+	couponFieldElement.value = "";
+}
