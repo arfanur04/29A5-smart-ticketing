@@ -54,10 +54,6 @@ function applyCoupon() {
 	hideElementById("selected-seat-alert");
 }
 
-function nextButton() {
-	console.log("nextButton");
-}
-
 document
 	.getElementById("passenger-number")
 	.addEventListener("keyup", function (e) {
@@ -67,3 +63,7 @@ document
 document.body.addEventListener("click", function () {
 	nextButtonEnable();
 });
+
+function nextButton() {
+	console.log("nextButton");
+}
