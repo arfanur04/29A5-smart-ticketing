@@ -187,7 +187,11 @@
 									<p class="text-[#1dd100] font-medium">Selected</p>
 								</div>
 							</div>
-							<div class="flex justify-end">
+							<div class="flex justify-between">
+								<div></div>
+								<div>
+									<p class="text-red-500" id="selected-seat-alert"></p>
+								</div>
 								<button>
 									<img src="./svg/steering.svg" alt="" />
 								</button>
@@ -245,6 +249,9 @@
 								<div class="flex justify-between px-4 font-bold">
 									<p>Total Price</p>
 									<p>BDT <span id="total-price">0</span></p>
+								</div>
+								<div>
+									<p class="text-center text-red-500" id="wrong-coupon"></p>
 								</div>
 								<div
 									id="coupon-element"

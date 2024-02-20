@@ -37,14 +37,14 @@ function grandTotal(arrayLength) {
 }
 
 function grandTotalCoupon(discountPercent) {
-	const couponElements = document.getElementById("coupon-element");
 	const grandTotalElement = document.getElementById("grand-total");
 	const selectedSeatElement = document.getElementById("selected-seat-length");
 	const selectedSeatNumber = parseInt(selectedSeatElement.innerText);
 	const totalPrice = selectedSeatNumber * 550;
 	const discountPrice = totalPrice - totalPrice * (discountPercent / 100);
 	grandTotalElement.innerText = discountPrice;
-	couponElements.classList.add("hidden");
+	hideElementById("coupon-element");
+	hideElementById("wrong-coupon");
 }
 
 function enableButton(elementId) {
@@ -55,4 +55,14 @@ function enableButton(elementId) {
 function hideElementById(elementId) {
 	const element = document.getElementById(elementId);
 	element.classList.add("hidden");
+}
+
+function showTextById(elementId, text) {
+	const element = document.getElementById(elementId);
+	element.innerText = text;
+}
+
+function showElementById(elementId) {
+	const element = document.getElementById(elementId);
+	element.classList.remove("hidden");
 }
