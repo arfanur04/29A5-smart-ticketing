@@ -64,3 +64,10 @@ document.body.addEventListener("click", function () {
 function nextButton() {
 	console.log("nextButton");
 }
+
+function scrollToParibahan() {
+	document.querySelector("#ph-paribahan").scrollIntoView({
+		behavior: "smooth", // Enables smooth scrolling
+		block: "start", // Scrolls to align the top of the element with the top of the div
+	});
+}

@@ -48,11 +48,12 @@
 							smartphone. No more rushing to the terminal or waiting in lines.
 						</p>
 
-						<a href="#ph-paribahan"
-							><button class="btn bg-[#1dd100] border-none font-bold">
-								Buy Tickets
-							</button></a
+						<button
+							onclick="scrollToParibahan()"
+							class="btn bg-[#1dd100] border-none font-bold"
 						>
+							Buy Tickets
+						</button>
 					</div>
 				</div>
 			</div>
@@ -247,12 +248,11 @@
 									<p>Total Price</p>
 									<p>BDT <span id="total-price">0</span></p>
 								</div>
-								<div
-									id="discounted-element"
-									class="flex justify-between hidden px-4 font-bold"
-								>
-									<p>Discounted Price</p>
-									<p>BDT <span id="discounted-price">0</span></p>
+								<div id="discounted-element" class="hidden px-4 font-bold">
+									<div class="flex items-center justify-between">
+										<p>Discounted Price</p>
+										<p>BDT <span id="discounted-price">0</span></p>
+									</div>
 								</div>
 								<div>
 									<p class="text-center text-red-500" id="wrong-coupon"></p>
