@@ -24,9 +24,6 @@ document
 			showElementById("selected-seat-alert");
 			hideElementById("wrong-coupon");
 		}
-		// if (seatArray.length) {
-		// 	console.log(seatArray);
-		// }
 	});
 
 function applyCoupon() {

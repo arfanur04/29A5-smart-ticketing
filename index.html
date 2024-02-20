@@ -47,9 +47,12 @@
 							Book your tickets anytime, anywhere, from your computer or
 							smartphone. No more rushing to the terminal or waiting in lines.
 						</p>
-						<button class="btn bg-[#1dd100] border-none font-bold">
-							Buy Tickets
-						</button>
+
+						<a href="#ph-paribahan"
+							><button class="btn bg-[#1dd100] border-none font-bold">
+								Buy Tickets
+							</button></a
+						>
 					</div>
 				</div>
 			</div>
@@ -95,7 +98,8 @@
 
 			<!-- ------------------------ P.H Paribahan Section ------------------------ -->
 			<section
-				class="bg-[#f7f8f8] mt-24"
+				id="ph-paribahan"
+				class="bg-[#f7f8f8] mt-24 mb-12 pb-24"
 				style="
 					border-radius: 88px 88px 0px 0px;
 					border-top: 2px solid rgb(29, 209, 0);
@@ -175,7 +179,7 @@
 					<section
 						class="flex flex-col gap-4 p-4 mt-6 bg-white lg:gap-10 rounded-xl lg:flex-row"
 					>
-						<div class="w-3/5 space-y-4">
+						<div class="space-y-4 lg:w-3/5">
 							<h4 class="text-2xl font-semibold">Select Your Seat</h4>
 							<div class="flex items-center justify-between">
 								<div class="flex items-center gap-2">
@@ -214,7 +218,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="w-2/5">
+						<div class="lg:w-2/5">
 							<h4 class="text-2xl font-semibold">Select Your Seat</h4>
 							<div class="bg-[#f7f8f8] space-y-2 rounded-xl pb-6">
 								<!-- table -->
@@ -235,20 +239,20 @@
 												<th>Price</th>
 											</tr>
 										</thead>
-										<tbody id="tbody">
-											<!-- row 1 -->
-											<!-- <tr>
-												<td>C2</td>
-												<td>Economy</td>
-												<td>550</td>
-											</tr> -->
-										</tbody>
+										<tbody id="tbody"></tbody>
 									</table>
 								</div>
 								<hr />
 								<div class="flex justify-between px-4 font-bold">
 									<p>Total Price</p>
 									<p>BDT <span id="total-price">0</span></p>
+								</div>
+								<div
+									id="discounted-element"
+									class="flex justify-between hidden px-4 font-bold"
+								>
+									<p>Discounted Price</p>
+									<p>BDT <span id="discounted-price">0</span></p>
 								</div>
 								<div>
 									<p class="text-center text-red-500" id="wrong-coupon"></p>
@@ -306,7 +310,7 @@
 								</label>
 								<div class="px-4">
 									<button
-										onclick="my_modal_5.showModal()"
+										onclick="my_modal_3.showModal()"
 										id="next-button"
 										class="btn bg-[#1dd100] text-white w-full btn-disabled border border-[#1dd100] hover:border-[#1dd100] hover:text-[#1dd100]"
 									>
@@ -318,10 +322,16 @@
 					</section>
 				</div>
 
-				<!-- Open the modal using ID.showModal() method -->
-				<!-- <button class="btn" onclick="my_modal_5.showModal()">open modal</button> -->
-				<dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+				<!-- You can open the modal using ID.showModal() method -->
+				<dialog id="my_modal_3" class="modal">
 					<div class="modal-box">
+						<form method="dialog">
+							<button
+								class="absolute btn btn-sm btn-circle btn-ghost right-2 top-2"
+							>
+								✕
+							</button>
+						</form>
 						<div
 							class="flex flex-col items-center justify-center p-6 space-y-4"
 						>
@@ -334,16 +344,9 @@
 							<p class="text-[#03071299]">
 								Shortly you will find a confirmation in your email.
 							</p>
-						</div>
-						<div class="flex justify-center w-full modal-action">
-							<form method="dialog ">
-								<!-- if there is a button in form, it will close the modal -->
-								<button
-									class="btn bg-[#27AE60] text-white rounded-[32px] px-16"
-								>
-									Continue
-								</button>
-							</form>
+							<button class="btn bg-[#27AE60] text-white rounded-[32px] px-16">
+								Continue
+							</button>
 						</div>
 					</div>
 				</dialog>

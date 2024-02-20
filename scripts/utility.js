@@ -41,10 +41,13 @@ function grandTotalCoupon(discountPercent) {
 	const selectedSeatElement = document.getElementById("selected-seat-length");
 	const selectedSeatNumber = parseInt(selectedSeatElement.innerText);
 	const totalPrice = selectedSeatNumber * 550;
-	const discountPrice = totalPrice - totalPrice * (discountPercent / 100);
+	const discount = totalPrice * (discountPercent / 100);
+	const discountPrice = totalPrice - discount;
 	grandTotalElement.innerText = discountPrice;
 	hideElementById("coupon-element");
 	hideElementById("wrong-coupon");
+	showElementById("discounted-element");
+	setTextElementValueById("discounted-price", discount);
 }
 
 function enableButton(elementId) {
